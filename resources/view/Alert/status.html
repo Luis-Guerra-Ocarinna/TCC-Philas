@@ -1,0 +1,1 @@
+<div class="alert alert-{{tipo}}" role="alert" onclick="$(this).slideUp(); let url = new window.URL(location.href); url.searchParams.delete('status'); window.history.replaceState({}, window.document.title, url.href);">{{mensagem}} {{anchor}}</div>

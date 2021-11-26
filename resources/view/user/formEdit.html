@@ -1,0 +1,57 @@
+<main class="container py-4">
+  <section id="titulo" class="text-center border-bottom">
+    <h2 class="mb-4">Dados Cadastrados</h2>
+    <p class="fs-5">Utilize o formulário para atualizar seus dados.</p>
+  </section>
+
+  {{status}}
+
+  <form action="" method="POST" id="form" class="needs-validation mt-3" novalidate>
+    <div class="row g-3">
+      <div class="col-sm-6">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" name="nome" id="nome" value="{{name}}" class="form-control" placeholder="Nome" required />
+        <div class="invalid-feedback">Nome é obrigatório.</div>
+      </div>
+
+      <div class="col-sm-6">
+        <label for="sobrenome" class="form-label">Sobrenome</label>
+        <input type="text" name="sobrenome" id="sobrenome" value="{{lastname}}" class="form-control" placeholder="Sobrenome" required />
+        <div class="invalid-feedback">Sobrenome é obrigatório.</div>
+      </div>
+
+      <div class="col-sm-6">
+        <label for="telefone" class="form-label">Telefone</label>
+        <input type="text" name="telefone" id="telefone" value="{{phone}}" maxlength="11" class="form-control" placeholder="Ex: 17991061050" required />
+        <div class="invalid-feedback">Telefone é obrigatório.</div>
+      </div>
+
+      <div class="col-sm-6">
+        <label for="cpf" class="form-label">CPF</label>
+        <input type="text" name="cpf" id="cpf" value="{{cpf}}" maxlength="14" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" class="form-control" placeholder="Ex: 52810466084" required readonly />
+        <div class="invalid-feedback">CPF é obrigatório.</div>
+      </div>
+
+      <div class="col-12">
+        <label for="usuario" class="form-label">Usuário</label>
+        <div class="input-group">
+          <span class="input-group-text">👤</span>
+          <input type="text" name="usuario" id="usuario" value="{{user}}" style="border-top-right-radius: 0.25rem; border-bottom-right-radius: 0.25rem" class="form-control" placeholder="Usuário" required />
+          <div class="invalid-feedback">Usuário é obrigatório.</div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" name="email" id="email" value="{{email}}" class="form-control" placeholder="you@example.com" required />
+        <div class="invalid-feedback">Coloque um email válido para contato.</div>
+      </div>
+    </div>
+
+    <hr class="my-4" />
+
+    <button type="submit" name="alterar" class="w-100 btn btn-dark btn-lg">Alterar</button>
+  </form>
+
+  <div class="mt-4 text-center" style="font-size: 18px"><a href="{{URL}}/usuario/minhaConta/senha" aria-label="Ir para alteração de senha"> Alterar Senha </a></div>
+</main>

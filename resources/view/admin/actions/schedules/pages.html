@@ -1,0 +1,17 @@
+<main class="container justify-content-center mt-4">
+  <h1>{{title}}</h1>
+  <p class="fs-5">{{title_content}}</p>
+
+  <hr />
+
+  <a id="back" href="#" aria-label="Retornar uma página"> <button class="btn btn-warning">Voltar</button></a>
+  <script>
+    document.getElementById('back').setAttribute('href', document.referrer);
+  </script>
+
+  <hr />
+
+  {{status}}
+
+  <section id="atendimetos">{{schedule}}</section>
+</main>

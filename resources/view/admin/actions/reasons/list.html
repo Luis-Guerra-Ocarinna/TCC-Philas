@@ -1,0 +1,31 @@
+<main class="container justify-content-center mt-4">
+  <h1>{{title_form}}</h1>
+  <p class="fs-5">{{content}}</p>
+
+  <hr />
+
+  <a href="{{URL}}/admin/motivos/new" aria-label="Cadastratar novo motivo">
+    <button type="button" class="btn btn-success">Cadastrar Motivo</button>
+  </a>
+
+  <hr />
+
+  {{status}}
+  <div class="table-responsive">
+    <table class="table table-light table-striped align-middle">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Descrição</th>
+          <th>Tempo Previsto</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{itens}}
+      </tbody>
+    </table>
+  </div>
+
+  {{pagination}}
+</main>

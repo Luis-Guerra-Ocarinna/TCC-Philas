@@ -1,0 +1,20 @@
+<main class="container justify-content-center mt-4">
+  <h1>{{title}}</h1>
+  <p class="fs-5">{{title_content}}</p>
+
+  <hr />
+
+  <!-- TODO: Admin agendar atendimento
+    <a href="{{URL}}/admin/atendimentos/new" aria-label="Cadastrar atendimento" class="btn btn-success"> Agendar Horário </a>
+   -->
+
+  <a href="{{URL}}/admin/atendimentos/historic" aria-label="Listar atendimentos no histórico" class="btn btn-success"> Histórico </a>
+
+  <a href="{{URL}}/admin/atendimentos/open" aria-label="Listar atendimentos no abertos" class="btn btn-success"> Abertos </a>
+
+  <a href="{{URL}}/admin/atendimentos/confirm" aria-label="Listar atendimentos no confirmar" class="btn btn-success"> A Confirmar </a>
+
+  <hr />
+
+  {{status}} {{content}}
+</main>

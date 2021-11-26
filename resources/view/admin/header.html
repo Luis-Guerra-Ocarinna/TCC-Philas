@@ -1,0 +1,46 @@
+<header>
+  <!-- Imagens -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+    <symbol id="people-circle" viewBox="0 0 16 16">
+      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+      <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+    </symbol>
+  </svg>
+  <!-- Fim Imagens -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a href="{{URL}}/admin" aria-label="Retornar para home"> <img src="{{URL}}/resources/img/Prop_Philas-Logo.svg" alt="Logo" width="100" height="100" /> </a>
+
+      <!-- Botão de collapse no Mobile -->
+      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#responsiveMenu" aria-controls="responsiveMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- TODO: hamburger com drop item pra baixo -->
+      <div id="responsiveMenu" class="collapse navbar-collapse">
+        <ul class="nav col-12 col-lg-12 me-lg-5 mb-1 justify-content-center" style="font-size: 20px">
+          <li><a href="{{URL}}/admin/conteudo" aria-label="Ir para o painel" class="nav-link px-3 link-secondary text-light">Contéudo</a></li>
+          <li><a href="{{URL}}/admin/atendimentos" aria-label="Ir para o painel" class="nav-link px-3 link-secondary text-light">Atendimentos</a></li>
+          <li><a href="{{URL}}/admin/usuarios" aria-label="Ir para o painel" class="nav-link px-3 link-secondary text-light">Usuários</a></li>
+          <li><a href="{{URL}}/admin/motivos" aria-label="Ir para o painel" class="nav-link px-3 link-secondary text-light">Motivos</a></li>
+        </ul>
+      </div>
+
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link text-white" data-bs-toggle="dropdown" aria-label="Somente um botao" aria-expanded="false" role="button">
+            <svg width="40" height="40" style="fill: currentColor">
+              <use xlink:href="#people-circle" />
+            </svg>
+          </a>
+
+          <ul class="dropdown-menu" aria-labelledby="dropdown03" data-bs-popper="none" style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate3d(0px, 70px, 0px)">
+            <li><a href="{{URL}}/admin/minhaConta" aria-label="Ir para alteração" class="dropdown-item" style="font-size: 20px"> Minha conta </a></li>
+            <li><a href="{{URL}}/logout" aria-label="Ir para logout" class="dropdown-item" style="font-size: 20px"> Sair </a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

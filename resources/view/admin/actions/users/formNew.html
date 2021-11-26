@@ -1,0 +1,72 @@
+<div class="container justify-content-center mt-4">
+  <h1>{{title_form}}</h1>
+
+  <hr />
+
+  <a href="{{URL}}/admin/usuarios"> <button class="btn btn-warning">Voltar</button></a>
+
+  <hr />
+
+  {{status}}
+
+  <form action="" method="POST" id="form" class="needs-validation" novalidate>
+    <div class="row g-3">
+      <div class="col-sm-6">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome" required />
+        <div class="invalid-feedback">Nome é obrigatório.</div>
+      </div>
+
+      <div class="col-sm-6">
+        <label for="sobrenome" class="form-label">Sobrenome</label>
+        <input type="text" name="sobrenome" id="sobrenome" class="form-control" placeholder="Sobrenome" required />
+        <div class="invalid-feedback">Sobrenome é obrigatório.</div>
+      </div>
+
+      <div class="col-sm-6">
+        <label for="senha" class="form-label">Senha</label>
+        <input type="password" name="senha" id="senha" class="form-control" placeholder="********************" required onchange="if(this.checkValidity()) document.getElementById('confirmar_senha').pattern = this.value;" />
+        <div class="invalid-feedback">Senha é obrigatória.</div>
+      </div>
+
+      <div class="col-sm-6">
+        <label for="confirmar_senha" class="form-label">Confirmar senha</label>
+        <input type="password" name="confirmar_senha" id="confirmar_senha" class="form-control" placeholder="********************" required />
+        <div class="invalid-feedback">As senhas devem ser iguais</div>
+      </div>
+
+      <div class="col-sm-6">
+        <label for="telefone" class="form-label">Telefone</label>
+        <input type="text" name="telefone" id="telefone" maxlength="11" class="form-control" placeholder="Ex: 17991061050" required />
+        <div class="invalid-feedback">Telefone é obrigatório.</div>
+      </div>
+
+      <div class="col-sm-6">
+        <label for="cpf" class="form-label">CPF</label>
+        <input type="text" name="cpf" id="cpf" maxlength="14" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" class="form-control" placeholder="Ex: 52810466084" required />
+        <div class="invalid-feedback">CPF é obrigatório.</div>
+      </div>
+
+      <div class="col-12">
+        <label for="usuario" class="form-label">Usuário</label>
+        <div class="input-group has-validation">
+          <span class="input-group-text">👤</span>
+          <input type="text" name="usuario" id="usuario" class="form-control" placeholder="Usuário" required />
+          <div class="invalid-feedback">Usuário é obrigatório.</div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" name="email" id="email" class="form-control" placeholder="you@example.com" required />
+        <div class="invalid-feedback">Coloque um email válido para contato.</div>
+      </div>
+
+      {{select_type}}
+    </div>
+
+    <hr class="my-4" />
+
+    <button type="submit" name="cadastrar" id="cadastrar" class="w-100 btn btn-dark btn-lg mb-4">Confirmar</button>
+  </form>
+</div>

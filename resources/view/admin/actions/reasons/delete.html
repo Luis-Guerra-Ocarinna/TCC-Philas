@@ -1,0 +1,17 @@
+<main class="container justify-content-center mt-4">
+  <h1>{{title_form}}</h1>
+
+  <hr />
+
+  <a href="{{URL}}/admin/motivos" aria-label="Retornar uma página"> <button class="btn btn-warning">Voltar</button></a>
+
+  <hr />
+
+  <form action="" method="POST" id="form" class="needs-validation" novalidate>
+    <div class="form-group fs-4">Você deseja realmente excluir o motivo <b>{{descricao}}</b> com id: <b>{{id}}</b>?</div>
+
+    <hr class="my-4" />
+
+    <button type="submit" name="cadastrar" id="cadastrar" class="w-100 btn btn-dark btn-lg mb-4">Confirmar</button>
+  </form>
+</main>

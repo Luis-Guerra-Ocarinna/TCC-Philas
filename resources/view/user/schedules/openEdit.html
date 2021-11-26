@@ -1,0 +1,48 @@
+<main class="container d-grid gap-3 mt-4">
+  <section id="titulo" class="text-center border-bottom">
+    <h2 class="mb-4">Atendimentos Abertos</h2>
+    <p class="fs-5">Edição do atendimento selecionado.</p>
+  </section>
+
+  {{status}}
+
+  <form action="" method="POST" id="form" class="needs-validation mt-3" novalidate>
+    <div class="row g-3">
+      <div class="col-12">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" name="nome" id="nome" value="{{name}}" class="form-control" placeholder="Nome" required readonly />
+        <div class="invalid-feedback">Nome é obrigatório.</div>
+      </div>
+
+      <div class="col-12">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" name="email" id="email" value="{{email}}" class="form-control" placeholder="Email" required readonly />
+        <div class="invalid-feedback">Coloque um email válido para contato.</div>
+      </div>
+
+      <div class="col-12">
+        <label for="motivo" class="form-label">Motivo</label>
+        {{select_reason}}
+        <div class="invalid-feedback">Selecione um motivo.</div>
+      </div>
+
+      <div class="col-12">
+        <label for="data_marcada" class="form-label">Data e Hora</label>
+        <div class="input-group">
+          <button type="button" id="toggle" class="input-group-text">📅</button>
+          <input type="text" name="data_marcada" id="data_marcada" value="{{data_marcada}}" style="border-top-right-radius: 0.25rem; border-bottom-right-radius: 0.25rem" class="form-control" placeholder="Escolha..." pattern="^(?:(?:(?:31(\/)(?:0[13578]|1[02]))\1|(?:(?:29|30)(\/)(?:0[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)\d{2})|(?:29(\/)02\3(?:(?:(?:1[6-9]|[2-9]\d)(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))|(?:0[1-9]|1\d|2[0-8])(\/)(?:(?:0[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)\d{2})) ([01][0-9]|2[0-3]):([0-5][0-9])$" required />
+          <div class="invalid-feedback">Coloque uma data válida.</div>
+        </div>
+      </div>
+
+      <div class="col-12" style="display: none">
+        <textarea class="form-control" rows="2" name="descricao" id="descricao" placeholder="Descreva..."></textarea>
+        <div class="invalid-feedback">Descreva o motivo do atendimento.</div>
+      </div>
+    </div>
+
+    <hr class="my-4" />
+
+    <button type="submit" name="cadastrar" id="cadastrar" class="w-100 btn btn-dark btn-lg mb-4">Confirmar</button>
+  </form>
+</main>

@@ -1,0 +1,17 @@
+# Config
+.vscode/
+.vsls.json
+
+# Frameworks
+bootstrap/
+jquery/
+# nn sei se esse é Framework nn (TypeScript v1 declaration files)
+typings/ 
+
+# dotenv environment variables file
+.env
+.env.bak
+
+# (alteram fácil)
+# img/
+.model/

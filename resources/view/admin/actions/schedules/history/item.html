@@ -1,0 +1,19 @@
+<tr>
+  <td class="text-center">{{id}}</td>
+  <td class="text-center">{{cod_motivo}}</td>
+  <td>{{descricao}}</td>
+  <td class="text-center">{{tempo_previsto}}</td>
+  <td>{{data_marcada}}</td>
+  <td>{{data_iniciada}}</td>
+  <td>{{data_finalizada}}</td>
+  <td class="text-center">{{cod_atendido}}</td>
+  <td class="text-center">{{cod_atendente}}</td>
+  <td class="text-center">
+    <a href="{{URL}}/admin/atendimentos/{{id}}/edit" aria-label="Editar atendimento" style="text-decoration: none">
+      <button type="button" class="btn btn-primary">Editar</button>
+    </a>
+    <a href="{{URL}}/admin/atendimentos/{{id}}/delete" aria-label="Excluir atendimento" style="text-decoration: none">
+      <button type="button" class="btn btn-danger">Excluir</button>
+    </a>
+  </td>
+</tr>

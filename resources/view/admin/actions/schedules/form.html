@@ -1,0 +1,62 @@
+<main class="container justify-content-center py-4" role="main">
+  <h1>{{title}}</h1>
+  <p class="fs-5">{{title_content}}</p>
+
+  <hr />
+
+  <a id="back" href="#" aria-label="Retornar uma página"><button class="btn btn-warning">Voltar</button></a>
+  <script>
+    document.getElementById('back').setAttribute('href', document.referrer);
+  </script>
+
+  <hr />
+
+  {{status}}
+
+  <form action="" method="POST" id="form" class="needs-validation" novalidate>
+    <div class="row g-3">
+      <div class="col-sm-6">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" name="nome" id="nome" value="{{name}}" class="form-control" placeholder="Nome" readonly />
+      </div>
+
+      <div class="col-sm-6">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" name="email" id="email" value="{{email}}" class="form-control" placeholder="Email" readonly />
+      </div>
+
+      <div class="col-sm-6">
+        <label for="data_marcada" class="form-label">Data e Hora</label>
+        <div class="input-group">
+          <button type="button" id="toggle" class="input-group-text">📅</button>
+          <input type="text" name="data_marcada" id="data_marcada" value="{{data_marcada}}" class="form-control" style="border-top-right-radius: 0.25rem; border-bottom-right-radius: 0.25rem" placeholder="Escolha..." pattern="^(?:(?:(?:31(\/)(?:0[13578]|1[02]))\1|(?:(?:29|30)(\/)(?:0[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)\d{2})|(?:29(\/)02\3(?:(?:(?:1[6-9]|[2-9]\d)(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))|(?:0[1-9]|1\d|2[0-8])(\/)(?:(?:0[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)\d{2})) ([01][0-9]|2[0-3]):([0-5][0-9])$" />
+          <div class="invalid-feedback">Coloque uma data válida.</div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <label for="tempo_previsto" class="form-label">Tempo Previsto</label>
+        <div class="input-group">
+          <input type="number" name="tempo_previsto" id="tempo_previsto" value="{{tempo_previsto}}" class="form-control" placeholder="Ex: 10" required />
+          <span class="input-group-text" style="border-top-right-radius: 0.25rem; border-bottom-right-radius: 0.25rem">minutos</span>
+          <div class="invalid-feedback">Tempo previsto é obrigatório.</div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <label for="motivo" class="form-label">Motivo</label>
+        {{select_reason}}
+      </div>
+
+      <div class="col-12">
+        <label for="descricao" class="form-label">Descrição</label>
+        <textarea class="form-control" rows="2" name="descricao" id="descricao" placeholder="Descreva..." required>{{descricao}}</textarea>
+        <div class="invalid-feedback">Descreva o motivo do atendimento.</div>
+      </div>
+    </div>
+
+    <hr class="my-4" />
+
+    <button type="submit" name="cadastrar" id="cadastrar" class="w-100 btn btn-dark btn-lg">{{action}}</button>
+  </form>
+</main>

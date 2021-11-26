@@ -1,0 +1,30 @@
+<main class="form-signin">
+  <form action="" method="POST" id="frmLogin" class="needs-validation mb-4" novalidate>
+    <div class="text-center">
+      <img src="{{URL}}/resources/img/Prop_Philas-Logo.svg" alt="Logo" width="150" height="150" />
+    </div>
+
+    {{status}}
+
+    <div class="form-floating mb-2">
+      <input type="text" name="usuario" id="usuario" class="form-control" placeholder="Login ou Email" autocomplete="username" required autofocus />
+      <label for="usuario">Login ou Email</label>
+      <div class="invalid-feedback">Login ou Email é obrigatório.</div>
+    </div>
+
+    <div class="form-floating">
+      <input type="password" name="senha" id="senha" class="form-control" placeholder="Senha" autocomplete="current-password" required />
+      <label for="senha">Senha</label>
+      <div class="invalid-feedback">Senha é obrigatória.</div>
+    </div>
+
+    <div class="checkbox my-3">
+      <input type="checkbox" name="lembrar" id="lembrar" value="remember-me" />
+      <label>Lembrar-me</label>
+    </div>
+
+    <button type="submit" name="logar" id="logar" class="w-100 btn btn-lg btn-dark">Entrar</button>
+  </form>
+
+  <a href="{{URL}}/singup" aria-label="Ir para criação de conta" class="w-100 btn btn-lg btn-link">Criar conta</a>
+</main>

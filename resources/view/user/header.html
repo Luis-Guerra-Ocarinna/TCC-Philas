@@ -1,0 +1,31 @@
+<header>
+  <!-- Imagens -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+    <symbol id="people-circle" viewBox="0 0 16 16">
+      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+      <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+    </symbol>
+  </svg>
+  <!-- Fim Imagens -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a href="{{URL}}/usuario" aria-label="Retornar para home Usuário"> <img src="{{URL}}/resources/img/Prop_Philas-Logo.svg" alt="Logo" width="100" height="100" /> </a>
+
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link text-white" aria-label="" data-bs-toggle="dropdown" aria-expanded="false" role="button">
+            <svg width="40" height="40" style="fill: currentColor">
+              <use xlink:href="#people-circle" />
+            </svg>
+          </a>
+
+          <ul class="dropdown-menu" aria-labelledby="dropdown03" data-bs-popper="none" style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate3d(0px, 70px, 0px)">
+            <li><a href="{{URL}}/usuario/minhaConta" aria="Ir para minha conta" class="dropdown-item" style="font-size: 20px"> Minha conta </a></li>
+            <li><a href="{{URL}}/logout" aria="ir para logout" class="dropdown-item" style="font-size: 20px"> Sair </a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

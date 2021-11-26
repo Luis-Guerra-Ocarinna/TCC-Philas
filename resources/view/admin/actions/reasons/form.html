@@ -1,0 +1,37 @@
+<main class="container justify-content-center mt-4">
+  <h1>{{title_form}}</h1>
+
+  <hr />
+
+  <a id="back" href="#" aria-label="Retornar uma página"> <button class="btn btn-warning">Voltar</button></a>
+  <script>
+    document.getElementById('back').setAttribute('href', document.referrer);
+  </script>
+
+  <hr />
+
+  {{status}}
+
+  <form action="" method="POST" id="form" class="needs-validation" novalidate>
+    <div class="row g-3">
+      <div class="col-12">
+        <label for="descricao" class="form-label">Descrição</label>
+        <input type="text" name="descricao" id="descricao" value="{{descricao}}" class="form-control" placeholder="Ex: Boletim" required />
+        <div class="invalid-feedback">Descrição é obrigatório.</div>
+      </div>
+
+      <div class="col-12">
+        <label for="tmp_previsto" class="form-label">Tempo Previsto</label>
+        <div class="input-group has-validation">
+          <input type="number" name="tmp_previsto" id="tmp_previsto" value="{{tmp_previsto}}" class="form-control" placeholder="Ex: 10" required />
+          <span class="input-group-text">minutos</span>
+          <div class="invalid-feedback">Tempo previsto é obrigatório.</div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="my-4" />
+
+    <button type="submit" name="cadastrar" id="cadastrar" class="w-100 btn btn-dark btn-lg mb-4">Confirmar</button>
+  </form>
+</main>

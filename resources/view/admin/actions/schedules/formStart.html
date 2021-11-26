@@ -1,0 +1,67 @@
+<main class="container justify-content-center py-4">
+  <h1>{{title}}</h1>
+  <p class="fs-5">{{title_content}}</p>
+
+  <hr />
+
+  <a id="back" href="#" aria-label="Retornar uma página"> <button class="btn btn-warning">Voltar</button></a>
+  <script>
+    document.getElementById('back').setAttribute('href', document.referrer);
+  </script>
+
+  <hr />
+
+  {{status}}
+  <form action="" method="POST" id="form">
+    <div class="row g-3">
+      <div class="col-sm-6">
+        <div class="input-group">
+          <span class="input-group-text">Início</span>
+          <input type="text" name="data_iniciada" id="data_iniciada" value="{{data_iniciada}}" class="form-control" readonly />
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="input-group">
+          <span class="input-group-text text-muted">Finalização Esperada</span>
+          <input type="text" name="final_esperado" id="final_esperado" value="{{expected_final}}" class="form-control text-muted" readonly />
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" name="nome" id="nome" value="{{name}}" class="form-control" placeholder="Nome" readonly />
+      </div>
+
+      <div class="col-sm-6">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" name="email" id="email" value="{{email}}" class="form-control" placeholder="Email" readonly />
+      </div>
+
+      <div class="col-sm-6">
+        <label for="data_marcada" class="form-label">Data e Hora</label>
+        <div class="input-group">
+          <span class="input-group-text">📅</span>
+          <input type="text" name="data_marcada" id="data_marcada" value="{{data_marcada}}" class="form-control" placeholder="Escolha..." readonly />
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <label for="tempo_previsto" class="form-label">Tempo Previsto</label>
+        <div class="input-group">
+          <input type="number" name="tempo_previsto" id="tempo_previsto" value="{{tempo_previsto}}" class="form-control" readonly />
+          <span class="input-group-text">minutos</span>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <label for="motivo" class="form-label">Motivo</label>
+        <textarea rows="2" name="motivo" id="motivo" class="form-control" readonly>{{motivo}}</textarea>
+      </div>
+    </div>
+
+    <hr class="my-3" />
+
+    <button type="submit" name="cadastrar" id="cadastrar" class="w-100 btn btn-dark btn-lg">{{action}}</button>
+  </form>
+</main>
