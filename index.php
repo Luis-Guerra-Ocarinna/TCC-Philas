@@ -22,6 +22,6 @@ include_once(__DIR__ . '/routes/api.php');
 // IMPRIME O RESPONSE DA ROTA
 $obRouter->run()->sendResponse();
 
-// REMINDER: IMAGEM BASE64
+// TODO: PAINEL DE CONTROLE PARA "NÓS"
 // REMINDER: Exlucao de chave estrabgeiras (zap)
 // FIXME: SQL Injection

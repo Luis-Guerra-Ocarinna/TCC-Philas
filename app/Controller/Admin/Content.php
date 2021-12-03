@@ -64,38 +64,32 @@ class Content extends Page {
    */
   public static function setContent(Request $request) {
     // POST VARS
-    $postVars    = $request->getPostVars();
-    $description = $postVars['descricao'];
-    $title       = $postVars['titulo'];
-    $file        = $postVars['arquivo'];
+    $postVars = $request->getPostVars();
 
-    if (isset($file)) {
-      // INSTANCIA DE UPLOAD
-      $obUpload = new Upload($file);
+    // DADOS DO CONTÉUDO
+    $titulo    = $postVars['titulo'];
+    $descricao = $postVars['descricao'];
+    $imagem    = $postVars['arquivo'];
 
-      // ALTERA O NOME DO ARQUIVO
-      $obUpload->setName('default');
+    if (isset($imagem)) {
+      // CONVERTE A IMAGEM EM DATA URL
+      $base64image = base64_encode(file_get_contents($imagem['tmp_name']));
+      $mimeType    = $imagem['type'];
+      $imagem      = "data:{$mimeType};base64,{$base64image}";
 
-      // MOVE OS ARQUIVOS DE UPLOAD
-      $sucesso = $obUpload->upload(__DIR__ . '/' . '../../../resources/img/Files', true);
-      if ($sucesso) {
-        // INSTANCIA DE ENTIDADE NÓS
-        $obUs = new EntityUs;
+      // INSTANCIA DE ENTIDADE NÓS
+      $obUs = new EntityUs;
 
-        // ATUALIZA O CONTÉUDO
-        $obUs->conteudo->titulo = $title;
-        $obUs->conteudo->texto  = $description;
-        $obUs->conteudo->imagem = $obUpload->getBaseName();
+      // ATUALIZA O CONTÉUDO
+      $obUs->conteudo->titulo = $titulo;
+      $obUs->conteudo->texto  = $descricao;
+      $obUs->conteudo->imagem = $imagem;
 
-        // ATUALIZA-OS
-        $obUs->update();
-
-        // REDIRECIONA O USUÁRIO
-        $request->getRouter()->redirect('/admin/conteudo?status=conteudoModificado');
-      }
-
-      // REDIRECIONA O USUÁRIO
-      $request->getRouter()->redirect('/admin/conteudo?status=erro');
+      // ATUALIZA-OS
+      $obUs->update();
     }
+
+    // REDIRECIONA O USUÁRIO
+    $request->getRouter()->redirect('/admin/conteudo?status=conteudoModificado');
   }
 }

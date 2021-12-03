@@ -44,7 +44,8 @@ class Home extends Page {
     // VIEW DA HOME
     $content =  View::render('home', [
       'titulo' => $obContent->titulo,
-      'texto'  => $obContent->texto
+      'texto'  => $obContent->texto,
+      'imagem' => $obContent->imagem,
     ]);
 
     // RETORNA A VIEW DA PÁGINA 

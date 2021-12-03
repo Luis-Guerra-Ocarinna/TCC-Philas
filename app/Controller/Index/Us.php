@@ -151,7 +151,7 @@ class Us extends Page {
     // VIEW DA TELA SOBRE AUTOR
     $content = View::render('us/about/authors', [
       'text'  => $obAuthors[$author]->descricao,
-      'image' => $obAuthors[$author]->imagem ?: 'Files/default.jpg',
+      'image' => $obAuthors[$author]->imagem ?? '',
       'links' => getLinks($obAuthors[$author]->links),
     ]);
 
