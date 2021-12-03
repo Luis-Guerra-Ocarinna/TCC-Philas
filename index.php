@@ -25,4 +25,3 @@ $obRouter->run()->sendResponse();
 // REMINDER: IMAGEM BASE64
 // REMINDER: Exlucao de chave estrabgeiras (zap)
 // FIXME: SQL Injection
-// FIXME: Pages Methdos styles e scripts nn podem ser nulos

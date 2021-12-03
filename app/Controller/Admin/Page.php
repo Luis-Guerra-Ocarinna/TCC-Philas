@@ -145,8 +145,8 @@ class Page {
     string $content,
     ?string $header  = null,
     ?string $footer  = null,
-    ?array  $styles  = [[]],
-    ?array  $scripts = [[]]
+    array  $styles  = [[]],
+    array  $scripts = [[]]
   ) {
     // UNI OS PADRÕES
     $styles  = array_merge($styles, self::$styles);
