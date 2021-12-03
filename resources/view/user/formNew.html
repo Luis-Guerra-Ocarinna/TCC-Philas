@@ -21,7 +21,7 @@
 
           <div class="col-sm-6">
             <label for="senha" class="form-label">Senha</label>
-            <input type="password" name="senha" id="senha" class="form-control" placeholder="********************" required onchange="if(this.checkValidity()) document.getElementById('confirmar_senha').pattern = this.value;" />
+            <input type="password" name="senha" id="senha" class="form-control" placeholder="********************" required onchange="if(this.checkValidity()) document.getElementById('confirmar_senha').pattern = this.value.replace(/[[\]{}()*+?.\\^$|]/g, '\\$&');" />
             <div class="invalid-feedback">Senha é obrigatória.</div>
           </div>
 

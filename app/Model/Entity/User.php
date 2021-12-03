@@ -60,7 +60,9 @@ class User {
    * @return  User          
    */
   public static function getUserByLogin(string $login) {
-    return self::getUsers("`login` = '$login'")->fetchObject(self::class);
+    $escape = fn ($v) => str_replace(['\\', '\'', '"'], ['\\\\', '\\\'', '\\"'], $v);
+
+    return self::getUsers("`login` = '{$escape($login)}'")->fetchObject(self::class);
   }
 
   /**

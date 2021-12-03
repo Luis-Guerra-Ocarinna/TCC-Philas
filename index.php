@@ -23,5 +23,4 @@ include_once(__DIR__ . '/routes/api.php');
 $obRouter->run()->sendResponse();
 
 // TODO: PAINEL DE CONTROLE PARA "NÓS"
-// REMINDER: Exlucao de chave estrabgeiras (zap)
-// FIXME: SQL Injection
+// TODO: Exclusao de chave estrangeiras (zap)

@@ -28,7 +28,7 @@
 
       <div class="col-sm-6">
         <label for="senha" class="form-label">Senha</label>
-        <input type="password" name="senha" id="senha" class="form-control" placeholder="{{pw_placeholder}}" {{pw_required}} data-required="{{pw_required}}" onchange="if (this.dataset.required) {this.setAttribute('required', '');confirmar_senha.setAttribute('required', '');} else {if(!this.value) confirmar_senha.removeAttribute('required');else confirmar_senha.setAttribute('required', '');}if(this.checkValidity()) confirmar_senha.pattern = this.value;" />
+        <input type="password" name="senha" id="senha" class="form-control" placeholder="{{pw_placeholder}}" {{pw_required}} data-required="{{pw_required}}" onchange="if (this.dataset.required) {this.setAttribute('required', '');confirmar_senha.setAttribute('required', '');} else {if(!this.value) confirmar_senha.removeAttribute('required');else confirmar_senha.setAttribute('required', '');}if(this.checkValidity()) confirmar_senha.pattern = this.value.replace(/[[\]{}()*+?.\\^$|]/g, '\\$&');" />
         <div class="invalid-feedback">Senha é obrigatória.</div>
       </div>
 

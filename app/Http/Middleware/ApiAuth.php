@@ -76,7 +76,7 @@ class ApiAuth implements MiddlewareInterface {
 
       // VALIDA OS DADOS FORNECIDOS NO JWT
       $obUser = EntityUser::getUserByLogin($decoded->login);
-      if (!$obUser->isValidToken($decoded)) throw new \Exception();
+      if (!$obUser || !$obUser->isValidToken($decoded)) throw new \Exception();
 
       // RETORNA A ENTIDADE USUÁRIO
       return $obUser;
