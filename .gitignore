@@ -5,8 +5,7 @@
 # Frameworks
 bootstrap/
 jquery/
-# nn sei se esse é Framework nn (TypeScript v1 declaration files)
-typings/ 
+
 
 # dotenv environment variables file
 .env

@@ -64,7 +64,7 @@ function setAllowTimes(currentDate, $input) {
 }
 
 // API URL
-var urlAPI = location.protocol + '//' + location.host + '/TCC/Protp_Philas/mvc' + '/api/v1';
+var urlAPI = `${location.protocol}//${location.host}/api/v1`;
 
 // INPUTS
 var data_marcada = $('#data_marcada');

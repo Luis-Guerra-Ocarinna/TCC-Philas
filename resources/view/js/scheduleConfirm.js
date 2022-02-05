@@ -1,4 +1,4 @@
-/// <reference path="../../../../../typings/globals/jquery/index.d.ts" />
+/// <reference path="../../typings/globals/jquery/index.d.ts" />
 
 // ALLOWTIMES
 let returns = [8, 14, 18];
@@ -46,7 +46,7 @@ function setAllowTimes(currentDate, $input) {
 }
 
 // API URL
-var urlAPI = location.protocol + '//' + location.host + '/TCC/Protp_Philas/mvc' + '/api/v1';
+var urlAPI = `${location.protocol}//${location.host}/api/v1`;
 
 // INPUTS
 var motivo = $('#motivo');
