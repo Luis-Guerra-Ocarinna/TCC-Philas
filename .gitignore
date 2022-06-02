@@ -2,15 +2,11 @@
 .vscode/
 .vsls.json
 
-# Frameworks
-bootstrap/
-jquery/
+# Frameworks (used when offline)
+resources/bootstrap/
+resources/jquery/
 
 
 # dotenv environment variables file
 .env
 .env.bak
-
-# (alteram fácil)
-# img/
-.model/
