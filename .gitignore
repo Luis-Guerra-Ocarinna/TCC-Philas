@@ -6,6 +6,8 @@
 resources/bootstrap/
 resources/jquery/
 
+# Test Cache
+.phpunit.result.cache
 
 # dotenv environment variables file
 .env

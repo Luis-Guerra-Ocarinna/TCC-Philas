@@ -6,7 +6,7 @@ TCC desenvolvido com o objetivo de ser aplicado a secretaria da etec criando phi
 
 <details style="width: max-content; white-space: pre !important; overflow-x: scroll !important;">
   <summary> <b>Banco de dados</b> </summary>
-  
+
   > ```sql
   > -- CRIA O BANCO
   > CREATE DATABASE `philas`; -- COMMENT 'TCC: Philas, Sistema gerenciador de atendimentos'
@@ -64,3 +64,5 @@ TCC desenvolvido com o objetivo de ser aplicado a secretaria da etec criando phi
   >   (NULL, 'Lorem ipsum dolor sit amet', 'Admin', '$2y$10$mbkpPmoCjCCFqZvqJSD8b.UCEZoL8uTIFk4vIavTcDuV912PXZ3QK', 'admin@example.com', '11111111111', '95788537002', 'Admin');
   > ```
 </details>
+
+> ***Nota:** PhpUnit foi instalado globalmente*
